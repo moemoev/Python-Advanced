@@ -1,0 +1,16 @@
+class User:
+
+    def __init__(self, user_id: int, username: str):
+        self.user_id = user_id
+        self.username = username
+        self.books = []
+
+    def info(self):
+        result = ', '.join(sorted(self.books))
+
+        return result
+
+    def __str__(self):
+        result = f"{self.user_id}, {self.username}, {self.books}"
+
+        return result
